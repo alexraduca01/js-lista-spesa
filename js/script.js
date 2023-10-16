@@ -4,7 +4,6 @@
 // MILESTONE 2 - STAMPA DELLA LISTA DELLA SPESA
 // Data la lista della spesa creata in precedenza, stampare sulla pagina (anche brutalmente, basta che si vedano) gli elementi della lista individualmente.
 
-const result = document.querySelector('div');
 const spesa = [];
 let ferma = false;
 
@@ -20,7 +19,11 @@ while(ferma === false){
 
 }
 
+const resultContainer = document.getElementById('wrapper');
+
 for(let a = 0; a < spesa.length; a++){
-    result.innerHTML = spesa;
+    const result = document.createElement('div');
+    result.innerHTML = spesa[a];
+    resultContainer.appendChild(result);
     console.log(spesa[a]);
 }
