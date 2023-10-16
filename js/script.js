@@ -22,4 +22,5 @@ while(ferma === false){
 
 for(let a = 0; a < spesa.length; a++){
     result.innerHTML = spesa;
+    console.log(spesa[a]);
 }
